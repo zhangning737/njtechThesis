@@ -1,8 +1,8 @@
-南京理工大学硕士论文Latex模板（njustThesis）
+南京工业大学硕士论文Latex模板（njtechThesis）
 ================================================================================
 Description: 
 
-LaTeX (Master degree) thesis template for Nanjing University of Sci & Tech
+LaTeX (Master degree) thesis template for Nanjing TECH University
 
 References: 
 
@@ -12,12 +12,12 @@ References:
 
 [3]. njustThesis(https://github.com/jiec827/njustThesis/)
 
-Date: 2019-09-23
+Date: 2023-04-25
 
 ================================================================================
 Pre-requirements:
 
-1. Texlive2020 on windows OS/Linux/MacOSX
+1. Texlive2022 on windows OS/Linux/MacOSX
 
 ================================================================================
 Notes:
@@ -32,7 +32,7 @@ readability of the codes(ecourage open-source projects);
 ================================================================================
 Download:
 
-    git clone https://github.com/zhangning737/njustThesisMaster.git
+    git clone https://github.com/zhangning737/njtechThesisMaster.git
 
 ================================================================================
 How to use it:
