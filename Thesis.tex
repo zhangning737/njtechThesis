@@ -1,0 +1,190 @@
+%%
+%%%%*************************Document Class Declaration*******************************
+%%
+\documentclass{njustThesis}% thesis template of the Nanjing Univ of Sci & Tech
+%% Options:
+%% [draftinfo] % show draft version information
+%%%%% --------------------------------------------------------------------------------
+%%
+%%%%**************************Command Define and Settings***************************
+%%
+\usepackage[njust]{sty/commons}% common settings
+\usepackage{sty/custom}% user defined commands
+\usepackage[textsize=scriptsize]{todonotes}
+\usepackage{physics} % 这个包含了常用数学物理方程的符号
+\usepackage{nicefrac}
+% \usepackage{gensymb}
+\usepackage{floatrow}
+\usepackage{makecell}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置代码列表框
+\usepackage{listings}
+
+\lstset{
+    numbers=left,
+    numberstyle=\small,
+    numbersep=8pt,
+    frame = single,
+    framexleftmargin=15pt}
+% 表头置于表上
+%\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx}
+\usepackage{tabulary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{L}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}%
+\newcolumntype{R}[1]{>{\hsize=#1\hsize\raggedleft\arraybackslash}X}%
+%\newcolumntype{C}[2]{>{\hsize=#1\hsize\columncolor{#2}\centering\arraybackslash}X}%
+\newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\todoZN}[1]{\todo[color=red!20]{ZN: #1}}
+\newcommand{\todoiZN}[1]{\todo[color=red!20,inline]{ZN: #1}}
+
+\newcommand{\todoWCJ}[1]{\todo[color=blue!20]{WCJ: #1}}
+\newcommand{\todoiWCJ}[1]{\todo[color=blue!20,inline]{WCJ: #1}}
+%
+\sisetup{range-phrase=\textup{--}}
+
+
+% Custom math
+\newcommand{\tbf}{\textbf}% text bold
+\newcommand{\tit}{\textit}% text italic
+\newcommand{\tsl}{\textsl}% text slanted
+\newcommand{\tsc}{\textsc}% text small cap
+\newcommand{\ttt}{\texttt}% text typewriter
+\newcommand{\trm}{\textrm}% text roman
+\newcommand{\tsf}{\textsf}% text sans serif
+\newcommand{\tup}{\textup}% text upright
+\newcommand{\mbf}{\mathbf}% math bold
+\providecommand{\mit}{\mathit}% math italic
+\newcommand{\msf}{\mathsf}% math sans serif
+\newcommand{\mrm}{\mathrm}% math roman
+\newcommand{\mtt}{\mathtt}% math typewriter
+\newcommand{\dcdot}{\mathbf{:}}
+
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\newcommand{\fourtens}{\mathbfcal}
+%%%%% ------------------------------------------------------------------------------------------
+%%%%*********************************Content**********************************************
+\newlength{\jeroenlen}
+\newenvironment{shizhong}
+{\settowidth{\jeroenlen}{式中:}%
+    \begin{description}[font=\normalfont,leftmargin=\jeroenlen,labelwidth=0pt,labelsep=0pt]
+        \item[式中:]%
+        \begin{itemize}[leftmargin=1.5em,labelsep=.5em, label={}]}
+        {\end{itemize}
+    \end{description}}
+%%
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    showstringspaces=false,
+    commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+    morestring=[b]",
+    morestring=[s]{>}{<},
+    morecomment=[s]{<?}{?>},
+    stringstyle=\color{black},
+    identifierstyle=\color{darkblue},
+    keywordstyle=\color{cyan},
+    morekeywords={xmlns,version,type}% list your attributes here
+}
+\usepackage{threeparttable}
+\begin{document}
+%%
+%%%%% ------------------------------------------------------------------------------------------
+%%
+%%%%*********************************Frontmatter******************************************
+%%
+%% Frontmatter of Title page, Table of contents, Preface chapter.
+%%
+%% >>> Cover
+%%
+    \input{tex/cover}
+%%
+%% >>> start frontmatter page No.
+%%
+    \frontmatter
+%%
+%% >>> Abstract
+%%
+    \input{tex/abstract}
+%%
+%%% >>> List of Content
+%%
+%\clearpage
+    \tableofcontents% contents catalog
+    %\addcontentsline{toc}{chapter}{目录}
+%% list figures and tables sperately
+    \listoffigures%   figures catalog
+%\addcontentsline{toc}{chapter}{插图目录}
+    \listoftables%    tables catalog
+    %\addcontentsline{toc}{chapter}{表格目录}
+%% list figures and tables together
+    %\listoffiguresandtables
+    %\addcontentsline{toc}{chapter}{图表目录}
+%%
+    % {\centering\printnomenclature}% nomenclature catalog
+    % \addcontentsline{toc}{chapter}{术语表}
+%%
+%%%%% ------------------------------------------------------------------------------------------
+%%
+%%%%*********************************Mainmatter******************************************
+%%
+%% Main topics.
+    \mainmatter
+%%
+%%% >>> Main Contents
+%%
+    \input{tex/ch1-introduction}%
+    \input{tex/ch2-experiment}%
+    \input{tex/ch3-parameters}
+    \input{tex/ch4-model}
+    \input{tex/ch5-results}
+    \input{tex/ch6-conclusion}
+    %\appendix
+    %\input{tex/ch2-thorey}
+    %%%%% ------------------------------------------------------------------------------------------
+    %%%%%%*********************************Appendix********************************************
+    %%
+    %% Some subordinate chapters.
+    %\input{tex/appendix}%
+    %%%%% ------------------------------------------------------------------------------------------
+    %%
+    %%%%********************************Backmatter*******************************************
+    %%
+    %% Matters of Bibliography, Glossary, Index.
+    \backmatter
+
+%%
+%%% >>> Bibliography
+%%
+%\bibliographystyle{plainnat}
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{参考文献}
+    {\centering\bibliography{bib/myRefs}}%
+%%
+%%% >>> Publications
+%%
+%%
+%%% >>> Acknowledgements
+%%
+    \input{tex/thanks}
+    \input{tex/publications}
+%%
+%%% >>> Resume
+%%
+   %% \input{tex/resume}
+%%
+\end{document}
+%%%%% ------------------------------------------------------------------------------------------

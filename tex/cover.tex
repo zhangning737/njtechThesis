@@ -1,0 +1,62 @@
+%%
+%%% >>> Title Page
+%%
+%%
+%%%%********************** Chinese Title Page **************************************** 
+%%
+\classification{}
+\confidential{公开}
+\UDC{}
+%% 标题格式 \title[short title for headers]{Long title of thesis}
+\title[泥岩的热力耦合长期形变特性研究]{泥岩的热力耦合长期形变特性研究}
+\titleUpp{泥岩的热力耦合长期形变特性研究}
+\titleLow{\phantom{we don't have subtitle}}
+\author{苏宇州}
+\advisor{范 进}
+\advisortitle{教授}
+\coadvisor{张 宁}
+\coadvisortitle{讲师}
+\entcoadvisor{董加举}
+\entcoadvisortitle{高级工程师}
+\degree{工程硕士}
+\major{建筑与土木工程}
+\interest{防灾减灾}
+\school{南京理工大学}
+\submitdate{2023年7月}
+\incoverdate{2023年7月}
+%
+\titleBackbone{泥\\岩\\的\\热\\力\\耦\\合\\长\\期\\变\\形\\特\\性\\研\\究}
+\schoolBackbone{南\\京\\理\\工\\大\\学}
+%%
+%%%%********************** English Title Page **************************************** 
+%%
+\englishtitle{Research on Thermal-mechanical Coupling Long-term Deformation Characteristics of Mudstone}
+\englishauthor{Su Yuzhou}
+\englishadvisor{Fan Jin}
+\englishcoadvisor{Zhang Ning}
+\englishinstitute{Nanjing University of Science \& Technology}
+\englishdate{December, 2021}
+\englishdegree{Dissertation}
+%%
+%%%%********************** Generate CHN & Eng Title *********************************** 
+%%% 
+%%
+\maketitle
+%%
+\makeincovertitle
+%%
+\makeenglishtitle
+%% make statement page
+\makeatletter
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+    \input{tex/statement}
+\end{center}
+\clearpage
+\if@twoside
+\thispagestyle{empty}
+\cleardoublepage
+\fi
+\makeatother
+%%%%*********************************** END *******************************************
