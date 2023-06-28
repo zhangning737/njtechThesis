@@ -299,27 +299,36 @@
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
-    \vspace*{-18pt}
+    %%\vspace*{-18pt}
 %% ================================================
 %% degree
-      \rmfamily\zihao{-2} \NJTECH@label@englishdegree\NJTECH@value@englishdegree
-    \vskip 60pt
+      %%\rmfamily\zihao{-2} \NJTECH@label@englishdegree\NJTECH@value@englishdegree
+    %%\vskip 60pt
 %% ================================================
+  \vskip 120pt
 %% title
       \rmfamily\bf\zihao{2} \NJTECH@value@englishtitle
     \vskip 30pt 
 %% ================================================
 %% author
-      \normalfont\it\zihao{-2}\NJTECH@label@englishauthor
+      \normalfont\zihao{-2}\NJTECH@label@englishauthor
       \\
-      \bf\zihao{-2}\emph\NJTECH@value@englishauthor
+      \zihao{-2}\NJTECH@value@englishauthor
+    \vskip 60pt 
+%% ================================================
+      \normalfont\zihao{-2} \NJTECH@label@thesissubmitted \\
+      \normalfont\zihao{-2} \NJTECH@value@englishinstitute \\
+      \normalfont\zihao{-2} \NJTECH@label@fordegree \\
+      \normalfont\zihao{-2} \NJTECH@value@englishmajor
     \vskip 60pt 
 %% ================================================
 %% supervisor
-    \begin{tabular}{rl}
-      \normalfont\it\zihao{-2} \NJTECH@label@englishadvisor & \bf\emph\NJTECH@value@englishadvisor\\
-      \normalfont\it\zihao{-2} \NJTECH@label@englishcoadvisor \hspace{45pt} & \normalfont\it\zihao{-2} \bf\emph\NJTECH@value@englishcoadvisor
-    \end{tabular}
+    
+      \normalfont\zihao{-2} \NJTECH@label@englishadvisor \\
+      \normalfont\zihao{-2} \NJTECH@value@englishadvisor \\
+      \normalfont\zihao{-2} \NJTECH@label@wordand \\
+      \normalfont\zihao{-2} \NJTECH@value@englishcoadvisor
+    
     \vskip \stretch{2}
 %% ================================================
 %% institute & date
