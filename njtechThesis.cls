@@ -343,7 +343,7 @@
   \vskip -5pt
     \parbox{\textwidth}{\centering\bf\songti\zihao{3}\NJTECH@label@statement}
   \vskip 13pt
-    \parbox{\textwidth}{\normalfont\zihao{4}\renewcommand{\baselinestretch}{1.6}\hspace{2em}\zihao{4}#1}
+    \parbox{\textwidth}{\normalfont\zihao{4}\renewcommand{\baselinestretch}{1.6}\zihao{4}#1}
   \vskip 1.8cm
     \parbox{\textwidth}{\noindent{}\zihao{4}\NJTECH@label@authorsign\hspace{3.5cm}\NJTECH@label@signdate}
   \vskip 4.45cm
@@ -352,9 +352,11 @@
 \newcommand\accredit[1]{%
     \parbox{\textwidth}{\centering\bf\songti\zihao{3}\NJTECH@label@accredit}
   \vskip 1.6cm
-    \parbox{\textwidth}{\normalfont\zihao{4}\renewcommand{\baselinestretch}{1.6}\hspace{2em}\zihao{4}#1}%
+    \parbox{\textwidth}{\normalfont\zihao{4}\renewcommand{\baselinestretch}{1.6}\zihao{4}#1}%
   \vskip 1.8cm
-    \parbox{\textwidth}{\noindent{}\zihao{4}\NJTECH@label@authorsign\hspace{3.5cm}\NJTECH@label@signdate}%
+    \parbox{\textwidth}{\noindent{}\zihao{4}\NJTECH@label@authorsign\hspace{3.5cm}\NJTECH@label@advisorsign}
+  \vskip 0.1cm
+    \parbox{\textwidth}{\noindent{}\zihao{4}\NJTECH@label@signdate\hspace{4.1cm}\NJTECH@label@signdate}%
 }%
 \clearpage
 \if@twoside
