@@ -177,21 +177,23 @@
 	\NJTECH@label@confidential~
 	\NJTECHunderline[150pt]{\NJTECH@value@confidential}\hspace{1.4cm}
    \vskip 10pt
-   	 \NJTECH@label@UDC~
-      	\NJTECHunderline[143pt]{\NJTECH@value@UDC}
+   	 \NJTECH@label@UDC~~
+      	\NJTECHunderline[150pt]{\NJTECH@value@UDC}
             \hfill
-      	\NJTECHunderline[0pt]{}
+      	\NJTECH@label@thesisid~\NJTECHunderline[150pt]{}\hspace{1.5cm}
     \vskip 10pt
 %% ==============================================
 %% logo
+  \vskip 30pt
     \parbox[c][4cm][c]{\textwidth}{%
         \centering
-        \includegraphics[width=14cm]{img/logo/njtech-black.pdf}
+        \includegraphics[width=14cm]{img/logo/njtech-logo-name.pdf}
     }%
 %% ==============================================
 %% title & author
+    \vskip 30pt
     \vskip 10pt
-        {\bf\kaishu\zihao{-0}\NJTECH@label@thesis}      %% Thesis title
+        {\bf\heiti\zihao{-0}\NJTECH@label@thesis}      %% Thesis title
     \vskip \stretch{2}
       {\vskip 10pt 
       \bf\heiti\zihao{-1}\NJTECHunderline[400pt]{~\NJTECH@value@titleUpp~}
@@ -199,8 +201,8 @@
                                 \bf\heiti\zihao{-2}\NJTECHunderline[400pt]{~\NJTECH@value@titleLow~}} \\
       \songti\zihao{-4}{\NJTECH@label@titleLab}
     \vskip \stretch{2}
-      {\bf\kaishu\zihao{-2}\NJTECHunderline[180pt]{~\NJTECH@value@author~}} \\
-      \hspace{0.15cm}\songti\zihao{-4}{\NJTECH@label@authorLab}
+      %%{\bf\kaishu\zihao{-2}\NJTECHunderline[180pt]{~\NJTECH@value@author~}} \\
+      %%\hspace{0.15cm}\songti\zihao{-4}{\NJTECH@label@authorLab}
     \vskip \stretch{2}
 %% ==============================================
 %% advisor and others
@@ -208,19 +210,23 @@
 \def\tabcolsep{1pt}
 \def\arraystretch{1.25}
 \begin{tabular}{cc}
+      \bf \NJTECH@label@authorname &  \NJTECHunderline[299pt]{} \\
       \bf\NJTECH@label@advisor   &  \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@advisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@advisortitle}}  \\
       \bf\NJTECH@label@entcoadvisor & \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@entcoadvisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@entcoadvisortitle}}  \\
       \bf\NJTECH@label@coadvisor & \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@coadvisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@coadvisortitle}}  \\
       \bf\NJTECH@label@degree    & \NJTECHunderline[299pt]{\bf\kaishu\zihao{3}\NJTECH@value@degree}  \\
       \bf\NJTECH@label@major    &  \NJTECHunderline[299pt]{\bf\kaishu\zihao{3}\NJTECH@value@major}  \\
       \bf\NJTECH@label@interest   & \NJTECHunderline[299pt]{\bf\kaishu\zihao{3}\NJTECH@value@interest}  \\
-      \bf\NJTECH@label@submitdate & \NJTECHunderline[299pt]{\bf\rmfamily\zihao{3}\NJTECH@value@submitdate}
 \end{tabular}
+\end{center}
+\vskip \stretch{2}
+\begin{center}
+\zihao{3}\NJTECH@value@submitdate
 \end{center}
 %% ==============================================
 %% footnote
- \vspace{2em}
- \NJTECH@value@UDCfootnote
+%%\vspace{2em}
+%%\NJTECH@value@UDCfootnote
 %%%%**************************** make backbone & github ********************************
   \clearpage
   \if@twoside
