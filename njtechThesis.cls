@@ -210,7 +210,7 @@
 \def\tabcolsep{1pt}
 \def\arraystretch{1.25}
 \begin{tabular}{cc}
-      \bf \NJTECH@label@authorname &  \NJTECHunderline[299pt]{} \\
+      \bf \NJTECH@label@authorname &  \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@author}} \\
       \bf\NJTECH@label@advisor   &  \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@advisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@advisortitle}}  \\
       \bf\NJTECH@label@entcoadvisor & \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@entcoadvisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@entcoadvisortitle}}  \\
       \bf\NJTECH@label@coadvisor & \NJTECHunderline[299pt]{{\bf\kaishu\zihao{3}\NJTECH@value@coadvisor} \hspace{4pt} {\kaishu\zihao{4}\NJTECH@value@coadvisortitle}}  \\
