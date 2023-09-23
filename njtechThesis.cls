@@ -292,7 +292,9 @@
 \newcommand\englishadvisor[1]{\def\NJTECH@value@englishadvisor{#1}}
 \newcommand\englishadvisortitle[1]{\def\NJTECH@value@englishadvisortitle{#1}}
 \newcommand\englishcoadvisor[1]{\def\NJTECH@value@englishcoadvisor{#1}}
+\newcommand\englishentcoadvisor[1]{\def\NJTECH@value@englishentcoadvisor{#1}}
 \newcommand\englishcoadvisortitle[1]{\def\NJTECH@value@englishcoadvisortitle{#1}}
+\newcommand\englishentcoadvisortitle[1]{\def\NJTECH@value@englishentcoadvisortitle{#1}}
 \newcommand\englishdegree[1]{\def\NJTECH@value@englishdegree{#1}}
 \newcommand\englishmajor[1]{\def\NJTECH@value@englishmajor{#1}}
 \newcommand\englishinstitute[1]{\def\NJTECH@value@englishinstitute{#1}}
@@ -332,6 +334,7 @@
     
       \normalfont\zihao{-2} \NJTECH@label@englishadvisor \\
       \normalfont\zihao{-2} \NJTECH@value@englishadvisor \\
+      \normalfont\zihao{-2} \NJTECH@value@englishentcoadvisor \\
       \normalfont\zihao{-2} \NJTECH@label@wordand \\
       \normalfont\zihao{-2} \NJTECH@value@englishcoadvisor
     
