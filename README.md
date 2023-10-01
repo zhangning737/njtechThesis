@@ -12,13 +12,13 @@ References:
 
 [3]. njustThesis(https://github.com/jiec827/njustThesis/)
 
-Date: 2023-04-25
+Date: 2023-10-1
 
 ======================================================================
 
 Pre-requirements:
 
-1. Texlive2022 on windows OS/Linux/MacOSX
+1. Texlive2023 on windows OS/Linux/MacOSX
 
 ======================================================================
 
