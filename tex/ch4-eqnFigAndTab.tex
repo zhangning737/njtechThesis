@@ -74,6 +74,7 @@
 
 图片引用是分为单个图片引用和一起引用，例如引用自图片时~\ref{fig:subfig:Curve_jpg}，引用全图时~\ref{fig:twoColns}。
 
+% eps 偶尔会有编译问题，且编译速度慢，建议直接用pdf
 \begin{figure}[ht!]
     \centering
     \subfigure[jpg位图格式]
@@ -87,10 +88,10 @@
     {
         \begin{minipage}{7.0cm}
             \centering
-            \includegraphics[width=0.9\textwidth]{./img/plot_eps.eps}
+            \includegraphics[width=0.9\textwidth]{./img/plot_eps}
         \end{minipage}
     \label{fig:subfig:plot_eps}}
-    \caption{插入竖排两列图片：a) jpg位图格式；b) eps矢量图格式}
+    \caption{插入竖排两列图片：a) jpg位图格式；b) pdf矢量图格式}
     \label{fig:twoColns}
 \end{figure}
 
@@ -112,7 +113,7 @@
     {
         \begin{minipage}{8.0cm}
             \centering
-            \includegraphics[width=0.9\textwidth]{./img/plot_eps.eps}
+            \includegraphics[width=0.9\textwidth]{./img/plot_eps}
         \end{minipage}
     \label{fig:minipage:plot_eps}}
     \caption{插入横排两列图片：a) jpg位图格式；b) eps矢量图格式}
