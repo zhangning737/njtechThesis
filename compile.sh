@@ -4,3 +4,5 @@ xelatex Thesis.tex
 biber Thesis
 xelatex Thesis.tex
 xelatex Thesis.tex
+open Thesis.pdf
+
