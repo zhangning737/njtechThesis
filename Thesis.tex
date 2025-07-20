@@ -1,13 +1,14 @@
 %%
 %%%%*************************Document Class Declaration*******************************
 %%
-\documentclass{njtechThesis}% thesis template of the Nanjing Univ of Sci & Tech
+\documentclass{njtechThesis}% thesis template of the Nanjing Tech Univ
 %% Options:
 %% [draftinfo] % show draft version information
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%**************************Command Define and Settings***************************
 %%
+\usepackage{url}
 \usepackage[njtech]{sty/commons}% common settings
 \usepackage{sty/custom}% user defined commands
 \usepackage[textsize=scriptsize]{todonotes}
@@ -16,6 +17,9 @@
 % \usepackage{gensymb}
 \usepackage{floatrow}
 \usepackage{makecell}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tabulary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置代码列表框
 \usepackage{listings}
@@ -100,10 +104,27 @@
     morekeywords={xmlns,version,type}% list your attributes here
 }
 \usepackage{threeparttable}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[backend=biber,style=gb7714-2015]{biblatex}
-\addbibresource{bib/myRefs.bib}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\usepackage[list=off,font=rm]{bicaption}
+\DeclareCaptionFont{myfont}{\fontsize{10pt}{11pt}\songti}
+\DeclareCaptionFont{myfont2}{\fontsize{10pt}{11pt}\rm}
+\captionsetup[figure][bi-second]{name=Fig.,font=myfont2} %设置图的英文编号前缀
+\captionsetup[table][bi-second]{name=Table,font=myfont2} %设置表的英文编号前缀
+
+\captionsetup{
+  font=myfont,
+  labelfont=bf,
+  justification=justified,
+  format=plain
+}
+
+%
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+\renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}
+%
+\CTEXsetup[name={第,章} ]{chapter} 
+%
 \begin{document}
 %%
 %%%%% ------------------------------------------------------------------------------------------
@@ -171,10 +192,10 @@
 %%
 %%% >>> Bibliography
 %%
+%\bibliographystyle{plainnat}
     \cleardoublepage
     \addcontentsline{toc}{chapter}{参考文献}
-    
-    \printbibliography[heading=bibliography]
+    {\centering\bibliography{bib/myRefs}}%
 %%
 %%% >>> Publications
 %%

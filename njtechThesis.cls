@@ -318,16 +318,16 @@
       \rmfamily\bf\zihao{2} \NJTECH@value@englishtitle
     \vskip 30pt 
 %% ================================================
-%% author
-      \normalfont\zihao{-2}\NJTECH@label@englishauthor
-      \\
-      \zihao{-2}\NJTECH@value@englishauthor
-    \vskip 60pt 
-%% ================================================
       \normalfont\zihao{-2} \NJTECH@label@thesissubmitted \\
       \normalfont\zihao{-2} \NJTECH@value@englishinstitute \\
       \normalfont\zihao{-2} \NJTECH@label@fordegree \\
       \normalfont\zihao{-2} \NJTECH@value@englishmajor
+    \vskip 60pt 
+%% ================================================
+%% author
+      \normalfont\zihao{-2}\NJTECH@label@englishauthor
+      \\
+      \zihao{-2}\NJTECH@value@englishauthor
     \vskip 60pt 
 %% ================================================
 %% supervisor
@@ -341,7 +341,7 @@
     \vskip \stretch{2}
 %% ================================================
 %% institute & date
-      \normalfont\zihao{-2} \NJTECH@value@englishinstitute
+      %\normalfont\zihao{-2} \NJTECH@value@englishinstitute
     \vskip 12pt
       \normalfont\zihao{-2} \NJTECH@value@englishdate
   \end{center}
@@ -405,20 +405,25 @@
   %\renewcommand{\headrulewidth}{0pt}%
   %\renewcommand{\footrulewidth}{0pt}%
   % ===
-  \fancyhead[LO]{\songti\zihao{-5}\NJTECH@value@pageDegree}
-  \fancyhead[RO]{\songti\zihao{-5}\NJTECH@value@titlemark}
-  \fancyhead[LE]{\songti\zihao{-5} \leftmark}%
-  \fancyhead[RE]{\songti\zihao{-5}\NJTECH@value@pageDegree}%
-  \fancyfoot[RO,LE]{\zihao{-5} ~\thepage~}
+  %\fancyhead[LO]{\songti\zihao{-5}\NJTECH@value@pageDegree}
+  %\fancyhead[RO]{\songti\zihao{-5}\NJTECH@value@titlemark}
+  %\fancyhead[LE]{\songti\zihao{-5} \leftmark}%
+  %\fancyhead[RE]{\songti\zihao{-5}\NJTECH@value@pageDegree}%
+  \fancyhead[CO]{\kaishu\zihao{-5}\NJTECH@value@pageDegree}
+  \fancyhead[CE]{\kaishu\zihao{-5} \leftmark}%
+  % \fancyfoot[RO,LE]{\zihao{-5} ~\thepage~}
+  \fancyfoot[CE,CO]{\zihao{-5} \thepage}
 }
 \pagestyle{fancy}
   \fancyhf{}
   \fancyhead{} % clear all fields
-  \fancyhead[LO]{\songti\zihao{-5}\NJTECH@value@pageDegree}
-  \fancyhead[RO]{\songti\zihao{-5}\NJTECH@value@titlemark}
-  \fancyhead[LE]{\songti\zihao{-5} \leftmark}%
-  \fancyhead[RE]{\songti\zihao{-5}\NJTECH@value@pageDegree}%
-  \fancyfoot[RO,LE]{\zihao{-5} ~\thepage~}
+  % \fancyhead[LO]{\songti\zihao{-5}\NJTECH@value@pageDegree}
+  % \fancyhead[RO]{\songti\zihao{-5}\NJTECH@value@titlemark}
+  % \fancyhead[LE]{\songti\zihao{-5} \leftmark}%
+  % \fancyhead[RE]{\songti\zihao{-5}\NJTECH@value@pageDegree}%
+  \fancyhead[CO]{\kaishu\zihao{-5}\NJTECH@value@pageDegree}
+  \fancyhead[CE]{\kaishu\zihao{-5} \leftmark}%
+  \fancyfoot[CE,CO]{\zihao{-5} \thepage}
 %%
 %%%%% ------------------------------------------------------------------------------------------
 %%  
@@ -521,6 +526,26 @@
 \newenvironment{symbolname}
   {\Nchapter{\NJTECH@label@symbolname}}
   {}
+%% 2. bibliography
+\renewenvironment{thebibliography}[1]
+     {\Nchapter{\centering\bibname}%
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
 %% 3. publications
 \newenvironment{publications}[1]
      {{\centering\Nchapter{\NJTECH@label@publications}}%

@@ -1,5 +1,6 @@
 南京工业大学硕士论文Latex模板（njtechThesis）
 ================================================================================
+# 谨慎使用，存在评阅人以模板字体与word不完全一致为由不通过审核的风险！
 Description: 
 
 LaTeX (Master degree) thesis template for Nanjing TECH University
@@ -12,7 +13,7 @@ References:
 
 [3]. njustThesis(https://github.com/jiec827/njustThesis/)
 
-Date: 2023-10-1
+Date: 2025-07-20
 
 ======================================================================
 
